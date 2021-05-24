@@ -1,0 +1,285 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #46a6da;
+}
+
+.circle {
+  position: absolute;
+  top: 38%;
+  left: 38%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  animation: circle 5s infinite;
+}
+
+.polygon {
+  width: 100px;
+  height: 100px;
+  fill: #fff;
+  position: absolute;
+  top: 38%;
+  left: 38%;
+  animation: polygon 5s infinite;
+}
+
+.triangle {
+  position: absolute;
+  top: 38%;
+  left: 38%;
+  width: 110px;
+  height: 110px;
+  fill: #fff;
+  animation: triangle 5s infinite;
+}
+
+.triangle-effect {
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  left: 50.5%;
+  top: 50.5%;
+  animation: triangle-effect 5s infinite;
+}
+
+.triangle-dash {
+  width: 4px;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  left: 108px;
+}
+.triangle-dash::after {
+  width: 4px;
+  height: 25px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+}
+
+.triangle-dash--2 {
+  transform: rotate(134deg);
+}
+
+.triangle-dash--3 {
+  transform: rotate(230deg);
+}
+
+.circle-ring {
+  height: 110px;
+  width: 110px;
+  border: 3px solid #fff;
+  position: absolute;
+  left: 50.5%;
+  top: 50.5%;
+  border-radius: 50%;
+  animation: circle-ring 5s infinite;
+}
+
+.polygon-effect {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 50.5%;
+  top: 50.5%;
+  animation: polygon-effect 5s infinite;
+}
+
+.polygon-dash {
+  position: absolute;
+  top: 0;
+  left: 98px;
+  height: 200px;
+  width: 4px;
+}
+.polygon-dash::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 4px;
+  height: 25px;
+  background: #fff;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.polygon-dash::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 4px;
+  height: 25px;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.polygon-dash--2 {
+  transform: rotate(45deg);
+}
+
+.polygon-dash--3 {
+  transform: rotate(-45deg);
+}
+
+.polygon-dash--4 {
+  transform: rotate(90deg);
+}
+
+@keyframes triangle-effect {
+  0%,
+  52% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  58% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes circle-ring {
+  0%,
+  74% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  84%,
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes polygon-effect {
+  0%,
+  30% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  36% {
+    opacity: 1;
+  }
+  40%,
+  100% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: translate(0, -300px) scaley(1.2);
+  }
+  10% {
+    transform: translate(0, 50px) scaley(0.8);
+  }
+  14% {
+    transform: translate(0, -30px) scaley(1.1);
+  }
+  18% {
+    transform: translate(0, 10px) scaley(0.9);
+  }
+  20%,
+  22% {
+    transform: translate(0, 0) scaley(1);
+  }
+  26% {
+    transform: translate(0, 0) scale(1.2);
+  }
+  32%,
+  74% {
+    transform: translate(0, 0) scale(0);
+  }
+  80% {
+    transform: translate(0, 0) scale(1.2);
+  }
+  84% {
+    transform: translate(0, 0) scale(0.9);
+  }
+  86%,
+  88% {
+    transform: translate(0, 0) scale(1);
+  }
+  92% {
+    transform: translate(0, -30px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 300px) scale(1.2);
+  }
+}
+
+@keyframes polygon {
+  0%,
+  30% {
+    transform: scale(0) rotate(22.5deg);
+  }
+  36% {
+    transform: scale(1.2) rotate(22.5deg);
+  }
+  40% {
+    transform: scale(0.9) rotate(22.5deg);
+  }
+  42%,
+  44% {
+    transform: scale(1) rotate(22.5deg);
+  }
+  48% {
+    transform: scale(1.2) rotate(22.5deg);
+  }
+  54%,
+  100% {
+    transform: scale(0) rotate(22.5deg);
+  }
+}
+
+@keyframes triangle {
+  0%,
+  52% {
+    transform: scale(0);
+  }
+  58% {
+    transform: scale(1.2);
+  }
+  62% {
+    transform: scale(0.9);
+  }
+  64%,
+  66% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  76%,
+  100% {
+    transform: scale(0);
+  }
+}
